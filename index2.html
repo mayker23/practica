@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let frutas =["bananas", "fresas", "sandia","aguacate"];
+    function mostrar_arreglo()
+    {
+        document.getElementById("lista").innerHTML=frutas;
+    }
+
+    function mostrar_tamano()
+    {
+        let cantidad = frutas.length;
+        document.getElementById("detalle").innerHTML=cantidad;
+    }
+
+    function agregar()
+    {
+        var nombre = document.getElementById("txt_fruta").value;
+        frutas.push(nombre);
+        mostrar_arreglo();
+        document.getElementById("txt_fruta").value="";
+    }
+
+    function quitar()
+    {
+        frutas.pop;
+        frutas.sort();
+        mostrar_arreglo();
+    }
+
+</script>
+<body onload="mostrar_arreglo()">
+    <div id="lista">
+    </div>
+    <div id="detalle">
+    </div>
+    <input type="button" value="agregar" onclick="agregar()">
+    <br>
+    <br>
+    <input type="text" id="txt_fruta">
+    <input type="button" value="Agregar Texto" onclick="agregar()">
+    <input type="button" value="Quitar Elemento" onclick="quitar()">
+</body>
+</html>
